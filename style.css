@@ -1,0 +1,348 @@
+/* ================================
+   GEMINI AI CHATBOT - MODERN UI
+   ================================ */
+
+/* ---------- Main Background ---------- */
+
+.stApp {
+    background:
+        radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.18), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.18), transparent 30%),
+        linear-gradient(135deg, #0f172a, #111827 50%, #1e1b4b);
+
+    color: black;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+
+/* ---------- Main Container ---------- */
+
+.block-container {
+    max-width: 900px;
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+
+/* ---------- Title ---------- */
+
+h1 {
+    text-align: center;
+
+    font-size: 46px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        90deg,
+        #60a5fa,
+        #a78bfa,
+        #f472b6
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 5px;
+
+    letter-spacing: -1px;
+
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+
+@keyframes titleGlow {
+
+    from {
+        filter: drop-shadow(0 0 5px rgba(129, 140, 248, 0.2));
+    }
+
+    to {
+        filter: drop-shadow(0 0 18px rgba(168, 85, 247, 0.5));
+    }
+
+}
+
+
+/* ---------- Subtitle ---------- */
+
+.stApp p {
+    color: #cbd5e1;
+}
+
+
+/* ---------- Text Area ---------- */
+
+textarea {
+
+    background: rgba(255, 255, 255, 0.06) !important;
+
+    color: #f8fafc !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+
+    border-radius: 16px !important;
+
+    padding: 18px !important;
+
+    font-size: 16px !important;
+
+    min-height: 150px !important;
+
+    resize: vertical !important;
+
+    backdrop-filter: blur(15px);
+
+    transition: all 0.3s ease;
+}
+
+
+/* Textarea focus */
+
+textarea:focus {
+
+    border: 1px solid #818cf8 !important;
+
+    box-shadow:
+        0 0 0 2px rgba(129, 140, 248, 0.15),
+        0 0 25px rgba(99, 102, 241, 0.2) !important;
+
+}
+
+
+/* ---------- Generate Button ---------- */
+
+.stButton > button {
+
+    width: 100%;
+
+    height: 52px;
+
+    border-radius: 14px;
+
+    border: none;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    background: linear-gradient(
+        90deg,
+        #6366f1,
+        #8b5cf6,
+        #a855f7
+    );
+
+    box-shadow:
+        0 8px 25px rgba(99, 102, 241, 0.3);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+
+}
+
+
+/* Button hover */
+
+.stButton > button:hover {
+
+    transform: translateY(-3px);
+
+    filter: brightness(1.15);
+
+    box-shadow:
+        0 12px 35px rgba(139, 92, 246, 0.5);
+
+}
+
+
+/* Button click */
+
+.stButton > button:active {
+
+    transform: translateY(0px);
+
+}
+
+
+/* ---------- Success Message ---------- */
+
+[data-testid="stAlert"] {
+
+    border-radius: 14px !important;
+
+    background: rgba(34, 197, 94, 0.1) !important;
+
+    border: 1px solid rgba(34, 197, 94, 0.3) !important;
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+/* ---------- Error Message ---------- */
+
+.stAlert {
+
+    border-radius: 14px !important;
+
+}
+
+
+/* ---------- Response Area ---------- */
+
+.response-box {
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(20px);
+
+    animation: responseAppear 0.5s ease;
+
+}
+
+
+@keyframes responseAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ---------- Input Label ---------- */
+
+label {
+
+    color: #f0e2eb !important;
+
+    font-weight: 600 !important;
+
+}
+
+
+/* ---------- Spinner ---------- */
+
+[data-testid="stSpinner"] {
+
+    color: #a78bfa !important;
+
+}
+
+
+/* ---------- Scrollbar ---------- */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #0f172a;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: linear-gradient(
+        #6366f1,
+        #a855f7
+    );
+
+    border-radius: 10px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #8b5cf6;
+
+}
+
+
+/* ---------- Hide Streamlit Menu ---------- */
+
+#MainMenu {
+
+    visibility: hidden;
+
+}
+
+
+/* ---------- Hide Footer ---------- */
+
+footer {
+
+    visibility: hidden;
+
+}
+
+
+/* ---------- Header ---------- */
+
+header {
+
+    background: transparent !important;
+
+}
+
+
+/* ---------- Mobile Responsive ---------- */
+
+@media (max-width: 768px) {
+
+    .block-container {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+        padding-top: 30px;
+
+    }
+
+    h1 {
+
+        font-size: 34px;
+
+    }
+
+    textarea {
+
+        font-size: 15px !important;
+
+    }
+
+}
